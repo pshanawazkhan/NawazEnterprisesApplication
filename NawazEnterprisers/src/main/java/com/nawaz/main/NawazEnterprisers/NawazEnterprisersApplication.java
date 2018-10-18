@@ -8,6 +8,6 @@ public class NawazEnterprisersApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NawazEnterprisersApplication.class, args);
-		System.out.println("---------------");
+		System.out.println("-----------");
 	}
 }

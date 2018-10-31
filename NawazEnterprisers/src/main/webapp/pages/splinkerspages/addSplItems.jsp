@@ -15,10 +15,10 @@
 </tr>
 
 <tr><td>	Splinker Place of Purchase:-</td>
-    <td> <input type="TEXT" name="place"/></td>
+    <td> <input type="TEXT" name="place" style="width: 235px; "/></td>
 </tr>
 <tr><td>	Splinker Item Price:-</td>
-    <td> <input type="text" name="price"/></td>
+    <td> <input type="text" name="price" style="width: 238px; "/></td>
 </tr>
 <tr>
     <td> <input type="Submit" value="Regester Splinker Details"/></td>

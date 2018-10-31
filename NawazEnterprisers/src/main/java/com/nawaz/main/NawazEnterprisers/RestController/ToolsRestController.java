@@ -1,5 +1,7 @@
 package com.nawaz.main.NawazEnterprisers.RestController;
 
+
+import io.swagger.annotations.Api;
 import java.util.List;
 
 
@@ -14,6 +16,7 @@ import com.nawaz.main.NawazEnterprisers.ToolsJPA.ToolsRepository;
 
 @RestController
 @RequestMapping("/api")
+@Api(value = "Tools Rest Controller", description = "Tools Price List")
 @CrossOrigin(origins="http://localhost:4200",allowedHeaders="*")
 public class ToolsRestController {
 

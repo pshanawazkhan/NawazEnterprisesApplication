@@ -3,9 +3,11 @@ package com.nawaz.main.NawazEnterprisers.SplinkersControllers;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -40,20 +42,21 @@ public class SplinkersControllers {
 	
 	//==============================================
 	@RequestMapping(value="/splloginSubmit")
-	public ModelAndView getSpinkerLoginPage(EmployeeLogin emp) {
-		ModelAndView mv;
-		if(emp.getUsername().equalsIgnoreCase("test") && emp.getPassword().equalsIgnoreCase("test")) {
+	 public ModelAndView getSpinkerLoginPage(@Valid EmployeeLogin emp,Errors errors) {
+		         ModelAndView mv;
+		                if (errors.hasErrors()) {
+		                 	mv = new ModelAndView("spllogin");
+		                 	return mv;
+		                         }
+		else if	(emp.getUsername().equalsIgnoreCase("test") && emp.getPassword().equalsIgnoreCase("test")) {
 			
-			mv= new ModelAndView("addSplItems");
+			             mv= new ModelAndView("addSplItems");
 			
-			return mv;
+		               	return mv;
 			
-		}
+		}              
 		
-		mv = new ModelAndView("spllogin");
-		
-		
-		return mv;
+		return null;
 	}
 	
 	@RequestMapping("splSubmitDetails")
